@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>USER PROFILE DETAILS</title>
+</head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<body>
+
+<h2>
+    USER SERVICES
+</h2>
+
+{% if request.method == 'POST' %}
+<h3> The request method called is {{request.method}}</h3>
+<h4> Added a User {{displayName}} with username {{name}} from the {{department}} department</h4>
+{% endif %}
+
+
+{% if request.method == 'GET' %}
+<h3> The request method called is {{request.method}}</h3>
+<h4> The details of all the users as a JSON string: {{users_json}}</h4>
+{% endif %}
+
+{% if request.method == 'PUT' %}
+<h3> The request method called is {{request.method}}</h3>
+<h4> Updated an existing user whose username is {{name}}</h4>
+{% endif %}
+
+{% if request.method == 'DELETE' %}
+<h3> The request method called is {{request.method}}</h3>
+<h4> Removed an existing user with username as {{name}}</h4>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+</head>
+
+<body>
+
+<h2><b>Query Add and Remove users</b></h2>
+
+<form action="/postuser" method="POST">
+
+<label for="username">Please enter your user name: </label>
+<input type="text" id="username" name="username"><br>
+
+<label for="displayName">Please enter your Display Name: </label>
+<input type="text" id="displayName" name="displayName"><br>
+
+<label for="department">Please enter your Department name: </label>
+<input type="text" id="department" name="department"><br>
+
+    <input type="submit" value="Post the user details">
+
+</form>
+
+<form action="/updateuser" method="PUT">
+
+<label for="username">Please enter the user name whose details need to be updated: </label>
+<input type="text" id="username" name="username"><br>
+
+<label for="displayName">Please enter the Display Name to be updated: </label>
+<input type="text" id="displayName" name="displayName"><br>
+
+<label for="department">Please enter the Department name to be updated: </label>
+<input type="text" id="department" name="department"><br>
+
+    <input type="submit" value="Update the user details">
+
+</form>
+
+<form action="/get_user" method="GET">
+    <label for="username">Please enter your user name for department and full name details: </label>
+  <input type="text" id="getusername" name="username"><br>
+
+    <input type="submit" value="Get the user details">
+</form>
+
+
+
+<form action="/getusers" method="GET">
+        <input type="submit" value="Get all the users details">
+</form>
+
+<form action="/deleteuser" method="DELETE">
+    <label for="username">Please enter the user name you want to delete: </label>
+  <input type="text" id="username" name="username"><br>
+
+        <input type="submit" value="Delete the user details">
+</form>
+
+
+</body>
+</html>
